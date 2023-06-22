@@ -14,14 +14,7 @@ public class PageEntry implements Comparable<PageEntry> {
         if (o == null) {
             return -1;
         }
-        if (count == o.getCount()) {
-            if (pdfName.equals(o.getPdfName())) {
-                return Integer.compare(page, o.getPage());
-            } else {
-                return pdfName.compareTo(o.getPdfName());
-            }
-        }
-        return Integer.compare(o.getCount(), count);
+        return Integer.compare(o.getCount(), this.getCount());
     }
 
     public String getPdfName() {
