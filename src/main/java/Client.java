@@ -3,7 +3,7 @@ import java.net.Socket;
 
 public class Client {
 
-    private static final int PORT = 8000;
+    private static final int PORT = 8989;
     private static final String HOST = "localhost";
     public static void main(String[] args) {
 
