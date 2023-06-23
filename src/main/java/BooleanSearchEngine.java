@@ -50,15 +50,15 @@ public class BooleanSearchEngine implements SearchEngine {
                     }
                 }
             }
-
+        }
+        for (List<PageEntry> value : wordsPageEntryMap.values()) {
+            Collections.sort(value);
         }
     }
 
     @Override
     public List<PageEntry> search(String word) {
-        List<PageEntry> list = ((wordsPageEntryMap.containsKey(word.toLowerCase()) && !stopList.contains(word.toLowerCase()))
+        return ((wordsPageEntryMap.containsKey(word.toLowerCase()) && !stopList.contains(word.toLowerCase()))
                 ? wordsPageEntryMap.get(word.toLowerCase()) : Collections.emptyList());
-        Collections.sort(list);
-        return list;
     }
 }
